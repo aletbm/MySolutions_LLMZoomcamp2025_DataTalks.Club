@@ -3,11 +3,11 @@ import chat_assistant
 
 our_mcp_client = mcp_client.MCPClient(["python", "weather_server.py"])
 
-mcp_tools = mcp_client.MCPTools(mcp_client=our_mcp_client)
-
 our_mcp_client.start_server()
 our_mcp_client.initialize()
 our_mcp_client.initialized()
+
+mcp_tools = mcp_client.MCPTools(mcp_client=our_mcp_client)
 
 our_mcp_client.get_tools()
 our_mcp_client.call_tool('get_weather', {'city': 'Berlin'})
